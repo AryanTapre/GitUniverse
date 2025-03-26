@@ -10,6 +10,7 @@
 
 #### :new: :wrench: Git setup -- Never used before on local machine
 
+![dotgitconfig locations on local machine](./resources/git-config-files.png)
 
 > Configure user details (*username* and *email*).
 > 
@@ -216,4 +217,33 @@
 > Deleting tag from remote repositiory / branch
 > 
 - git push <short_name> <branch_name> --delete <tag_name>
+
+
+---
+
+#### Working with alias --short names for command
+
+> Creating and setting alias in global config
+
+---
+
+#### Working with Branches
+
+> Creating new branch
+>
+- git branch <branch_name>
+
+> Switching to existing branch
+> 
+- git switch <branch_name>
+
+> Create new branch, and switch to it immediately
+> 
+- git switch --create <branch_name>
+
+> List all available branches 
+> 
+- git branch
+
+---
 
