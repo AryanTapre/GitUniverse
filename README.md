@@ -192,3 +192,28 @@
 #### Working with Tags --A special pointer to commit
 
 ![understanding tags](./resources/git-tags.png)
+
+> List all tages available
+>
+- git tag --list
+
+> Creating new *annotaed* tag
+>
+- git tag -a <tag_name> -m "<tag_message>"
+
+> Display tag details
+>
+- git show <tag_name>
+
+> Pushing tags to remote repository
+>: by default git creates tags only for local branch, not remote
+- git push <short_name> <branch_name> <tag_name>
+
+> Deleting tag in local branch
+> 
+- git tag --delete <tag_name>
+
+> Deleting tag from remote repositiory / branch
+> 
+- git push <short_name> <branch_name> --delete <tag_name>
+
