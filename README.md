@@ -187,3 +187,8 @@
 - git remote push <short_name> <branch_name> --set-upstream
 
 
+---
+
+#### Working with Tags --A special pointer to commit
+
+![understanding tags](./resources/git-tags.png)
