@@ -149,10 +149,41 @@
 ---
 
 #### Working with Remotes
+***<center>short_name = abberavation of remote URL</center>*** <br>
 
 > Add URL to local repository of your remote repository (gitHub)
 >
 - git remote add <Short_name> <URL>
    - git remote add origin `git@github.com`:AryanTapre/GitUniverse.git 
+
+***git remote -v*** : shows current push and pull URL
+
+> Download data from remote
+>: updates localBranch with that of remote, but does'nt automatically merge to changes local branches
+- git fetch <short_name>
+
+> Fetch + merge remote changes to local branch
+>: If your current local branch is setup to track remote branch use this command, --automatically fetches and merge that remote branch to local branch 
+- git pull <short_name>
+
+> Pushes local branch changes to remote branch
+>: Only works if you have ***write access*** to remote project, proper authentication and n/w connectivity
+- git push <short_name> <branch_name>
+
+> Inspect remote branches locally
+>
+- git remote show <short_name>
+
+> Rename <short_name> for remote repository
+>
+- git remote rename <old_short_name> <new_short_name>
+
+> Remote <short_name> / remote from local repo
+>
+- git remote remove <short_name>
+
+> Establish relationship with local and remote branch
+>: used while pushing changes to remote, no need to mention <short_name> and <branch_name> is setted
+- git remote push <short_name> <branch_name> --set-upstream
 
 
