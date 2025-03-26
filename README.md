@@ -146,6 +146,13 @@
 > 
 - git revert <commit_hash>
 
+---
 
+#### Working with Remotes
+
+> Add URL to local repository of your remote repository (gitHub)
+>
+- git remote add <Short_name> <URL>
+   - git remote add origin `git@github.com`:AryanTapre/GitUniverse.git 
 
 
