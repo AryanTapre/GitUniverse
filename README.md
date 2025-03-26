@@ -4,7 +4,7 @@
 **Untracked Files**
 : Files that were not part of last snapshot/commit, or not included in staging area before.
 
-![git stages and file states](./git-stages-of-files.png)
+![git stages and file states](./resources/git-stages-of-files.png)
 
 ---
 
