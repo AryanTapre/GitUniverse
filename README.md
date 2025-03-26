@@ -247,3 +247,84 @@
 
 ----
 
+#### Comprehending *foundations* of Branching & Merging
+
+> To merge a branch onto the current branch
+>
+- First switch to your current branch, and run
+- git merge <branch_name>
+
+> Delete branch from local machine
+>
+- git branch --delete <branch_name>
+
+> Delets branch from Remote (gitHub)
+>: :warning: First delete branch locally
+- git push <short_name> --delete <branch_name>
+
+> print last commit of all branches
+>
+- git branch -v 
+
+> Filter newly merged branches to your local(current) branch
+>
+- git branch --merged
+
+>  Filter list branches that are not merged yet
+>
+- git branch --no-merged
+
+> To forcefully delete branch even though not merged
+>
+- git branch -d <branch_name>
+
+> List all the branches setted locally and remotely
+>
+- git branch --all
+
+> To rename branch locally
+>
+- git branch --move <old_branch_name> <new_branch_name>
+
+> To rename branch remotely --onces locally renamed it
+> 
+- First delete branch from remote (git push origin --delete <branch_name>)
+- Push new branch to remote
+- verify remote branch by listing (git branch --all)
+
+> ***Sync local branch with remote***
+>: Fetches updates from the remote repository (new branches, updates, etc.).
+
+Removes stale remote-tracking branches that no longer exist on the remote.
+- git fetch --prune
+
+
+***<center><ins>Understanding Merge</ins></center>***
+
+![git merge](./resources//git-merge.png)
+
+***Fast forward merge =>***
+ 
+ ![*Fast forward merge](./resources/fast-forward-merge.png)
+
+ ![fast forward merge 2](./resources//fast-forward-merge-2.png)
+
+
+***Three way merge =>***
+
+ ![*Fast forward merge](./resources/three-way-merge.png)
+
+ ![*Fast forward merge](./resources/three-way-merge-2.png)
+
+ *Git uses a three-way merge when combining changes from two branches that have diverged from a common ancestor, typically during a merge operation, to reconcile differences and create a new merge commit.*
+
+
+==Three-Way Merge Process:==
+
+
+Step 1: Identify the common ancestor commit (A).
+
+Step 2: Compare changes made in the current branch (C) and the feature branch (B) relative to A.
+
+Step 3: Combine those changes into a new merge commit.
+
