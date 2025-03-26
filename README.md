@@ -328,3 +328,45 @@ Step 2: Compare changes made in the current branch (C) and the feature branch (B
 
 Step 3: Combine those changes into a new merge commit.
 
+
+---
+
+#### Working with Rebasing
+
+*<center>Rebasing in Git is the process of moving or reapplying a branch's commits on top of another base commit, typically to maintain a linear history or integrate upstream changes, by rewriting the commit history.</center>*
+
+![git rebasing](./resources/git-rebasing.png)
+
+![git rebasing](./resources//git-rebasing-2.png)
+
+***What happened?***
+
+    1. In git commits are immutable snapshots (can't alter/modifty)
+	2. We want to rebase 'bough' branch onto 'main' branch
+	3. Firstly --git identify unique commits of bough branch that are B1 and B2
+	4. Copies content of B1 & B2, makes commit where main branch pointer  is referring to (A3) a base for replaying (rewrtting)
+	5. Here, git creates new commits named as B1' and B2' with content of original ones
+	6.  Now parent of B1' becomes A3
+	7. Original B1 and B2 commits are unreferenced ---stored at git database, managed by 'reflog' file [tracking them]
+	8. for the span of 30 days they will sustain there --- as time expires get killed by garbageCollector (GC)   
+
+***Some usefull commands***
+
+> rebasing command
+>: (currently in bough branch) git rebase main  (rebase bough into main branch)
+- git rebase main
+
+> To recover old commits
+>: to recover old commits /branch (B1 and B2 )
+- git reset --hard <commit_hash>  # old hash of commit B2 from reflog file
+			(This moves Bough back to B2, restoring the original history.)
+
+> to keep changes, without undoing rebase
+>
+- git branch <branch-name> <commit> # old commit of B2 from reflog file
+
+---
+
+#### Rules for any remote communication protocols
+
+![remote-communication-protocols](./resources/remote-communication-protocols.png)
