@@ -370,3 +370,40 @@ Step 3: Combine those changes into a new merge commit.
 #### Rules for any remote communication protocols
 
 ![remote-communication-protocols](./resources/remote-communication-protocols.png)
+
+
+---
+
+#### How to setup Remote repository --gitHub
+
+
+> **1.	initialize local git repository**
+-	git init
+
+> **2.	Generate SSH key pairs(public and private) on local machine**
+-	ssh-keygen -t rsa -b 4096 -C "your_email@example.com" <br><br>
+	
+	`-t rsa` -> Specifies RSA as key type
+	`-b 4096` -> Generates a 4096-bit key (*more secure than default 2048-bit*)
+	`-C "your_email@example.com"` -> Adds a comment to identify the key
+
+
+![ssh key location on local-machine](./resources/ssh-location.png)
+
+
+> **3.	Add the SSH key to SSH Agent (*optional*)**
+- Start the SSH agent
+	: eval "$(ssh-agent -s)"
+- Add your private key
+	: ssh-add ~/.ssh/id_rsa
+
+> **4.	Copy the Public key (*For Authentication*)**
+- cat ~/.ssh/id_rsa.pub | xclip -selection clipboard (*copies key onto clipboard*)
+
+> **5. Paste onto the Remote Server --gitHub**
+
+![pasting public key onto github server](./resources/ssh-remote-github.png)
+
+> **6.	Verify remote by pushing**
+
+![Verifying remote](./resources/remote-verify.png)
