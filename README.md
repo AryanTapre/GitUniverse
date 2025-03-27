@@ -27,7 +27,7 @@
 
 ---
 
-#### Must know commands as developer
+## Must know commands as developer
 
 > Check current state of repository
 >
@@ -73,7 +73,7 @@
 
 ---
 
-#### Working with *dotgitignore* files
+## Working with *dotgitignore* files
 
 - :warning: <ins>**what git does**</ins>: If file to ignore by git is already committed / tracked, even after adding it's name to .gitignore file git refuses to ignore it.
 
@@ -87,7 +87,7 @@
 
 ---
 
-#### Let's see some git history commands
+## Let's see some git history commands
 
 > List all commits uptill now
 >
@@ -124,7 +124,7 @@
 
 
 ---
-#### Git undoing changes
+## Git undoing changes
 
 > To rewrite the commit
 >: If you want to redo the commit, make additional changes you forget stage them and commit again use --amend option 
@@ -149,7 +149,7 @@
 
 ---
 
-#### Working with Remotes
+## Working with Remotes
 ***<center>short_name = abberavation of remote URL</center>*** <br>
 
 > Add URL to local repository of your remote repository (gitHub)
@@ -190,7 +190,7 @@
 
 ---
 
-#### Working with Tags --A special pointer to commit
+## Working with Tags --A special pointer to commit
 
 ![understanding tags](./resources/git-tags.png)
 
@@ -221,13 +221,13 @@
 
 ---
 
-#### Working with alias --short names for command
+## Working with alias --short names for command
 
 > Creating and setting alias in global config
 
 ---
 
-#### Working with Branches
+## Working with Branches
 
 > Creating new branch
 >
@@ -247,7 +247,7 @@
 
 ----
 
-#### Comprehending *foundations* of Branching & Merging
+## Comprehending *foundations* of Branching & Merging
 
 > To merge a branch onto the current branch
 >
@@ -331,7 +331,7 @@ Step 3: Combine those changes into a new merge commit.
 
 ---
 
-#### Working with Rebasing
+## Working with Rebasing
 
 *<center>Rebasing in Git is the process of moving or reapplying a branch's commits on top of another base commit, typically to maintain a linear history or integrate upstream changes, by rewriting the commit history.</center>*
 
@@ -367,14 +367,14 @@ Step 3: Combine those changes into a new merge commit.
 
 ---
 
-#### Rules for any remote communication protocols
+## Rules for any remote communication protocols
 
 ![remote-communication-protocols](./resources/remote-communication-protocols.png)
 
 
 ---
 
-#### How to setup Remote repository --gitHub
+## How to setup Remote repository --gitHub
 
 
 > **1.	initialize local git repository**
@@ -411,7 +411,7 @@ Step 3: Combine those changes into a new merge commit.
 
 ---
 
-### How to setup GPG(*GNU private guard*) keys
+## How to setup GPG(*GNU private guard*) keys
 
 <center>GPG (GNU Privacy Guard) keys are used to sign Git commits and tags, proving that they were created by you. GitHub displays a "Verified" badge next to signed commits, adding authenticity.</center> <br>
 
