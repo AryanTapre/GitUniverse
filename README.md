@@ -407,3 +407,74 @@ Step 3: Combine those changes into a new merge commit.
 > **6.	Verify remote by pushing**
 
 ![Verifying remote](./resources/remote-verify.png)
+
+
+---
+
+### How to setup GPG(*GNU private guard*) keys
+
+<center>GPG (GNU Privacy Guard) keys are used to sign Git commits and tags, proving that they were created by you. GitHub displays a "Verified" badge next to signed commits, adding authenticity.</center> <br>
+
+> **1.	Install GPG**
+-	sudo apt install gnupg
+
+> **2.	Generate a GPG key**
+-	gpg --full-generate-key 
+<br>
+
+	*Key Configuration Prompts*
+		Select Key Type: Choose RSA and RSA (default).
+
+		- Choose Key Size: Type 4096 (for better security).
+
+		- Set Expiration: Type 0 (never expire) or set a validity period.
+
+		- Enter Your Identity:
+
+		- Name: Use your GitHub name.
+
+		- Email: Use your GitHub email (your_email@example.com).
+
+		- Comment: (Optional, press Enter to skip).
+
+		- Set a Passphrase: Choose a secure one (used when signing commits).
+
+		- Once completed, it will generate a key pair (private + public).
+
+<br>
+
+> **3.	Get your GPG key ID**
+-	gpg --list-secret-keys --keyid-format=long
+
+	:	You'II see output like:
+	:	``sec   rsa4096/3AA5C34371567BD2 2025-03-27 [SC]``
+	:   Here, ``3AA5C34371567BD2`` is your GPG Key ID.
+
+
+> **4.	Export the Public Key**
+-	gpg --armor --export 3AA5C34371567BD2
+
+	:	You'II see output like:
+	:	``-----BEGIN PGP PUBLIC KEY BLOCK-----``
+		``...``
+		``-----END PGP PUBLIC KEY BLOCK-----``
+	*Copy everything (including the headers)*
+
+> **5.	Add GPG key to 	GitHub**
+
+![setting up GPG keys on github](./resources/gpg-key-github.png)
+
+> **6.	Configure Git to Sign commits**
+
+-	``git config --global user.signingkey 3AA5C34371567BD2``
+-	``git config --global commit.gpgsign true``
+
+
+> **7.	Test a Signed Commit**
+
+-	git commit -S -m "This is a signed commit"
+
+	: To verify Signature
+	: ``git log --show-signature``
+
+
