@@ -8,7 +8,7 @@
 
 ---
 
-#### :new: :wrench: Git setup -- Never used before on local machine
+## :new: :wrench: Git setup -- Never used before on local machine
 
 ![dotgitconfig locations on local machine](./resources/git-config-files.png)
 
