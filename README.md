@@ -106,7 +106,7 @@
 > 
 - git log --pretty = fuller/full/oneline/short
 
-> Display log since particular date (yyyy-mm-dd)
+>  yes, Display log since particular date (yyyy-mm-dd)
 > 
 - git log --since="yyyy-mm-dd"
 
